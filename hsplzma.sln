@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hsplzma", "hsplzma\hsplzma.vcxproj", "{9B7DADFD-5D5C-445F-AD77-81E1D2819459}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hsplzmax", "hsplzmax\hsplzmax.vcxproj", "{EBF079C5-AA10-417E-B7B8-EE24711A6541}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Debug|Win32.Build.0 = Debug|Win32
+		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Release|Win32.ActiveCfg = Release|Win32
+		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Release|Win32.Build.0 = Release|Win32
+		{EBF079C5-AA10-417E-B7B8-EE24711A6541}.Debug|Win32.ActiveCfg = Release|Win32
+		{EBF079C5-AA10-417E-B7B8-EE24711A6541}.Debug|Win32.Build.0 = Release|Win32
+		{EBF079C5-AA10-417E-B7B8-EE24711A6541}.Release|Win32.ActiveCfg = Release|Win32
+		{EBF079C5-AA10-417E-B7B8-EE24711A6541}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

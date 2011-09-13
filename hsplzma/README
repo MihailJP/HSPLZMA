@@ -1,0 +1,27 @@
+Please put the following files on this folder.
+
+From Hot Soup Processor SDK:
+(Found at (where you install HSP)\hspsdk\hpi3sample)
+- hsp3debug.h
+- hsp3plugin.h
+- hsp3struct.h
+- hspvar_core.h
+
+From LZMA SDK:
+(Found at http://www.7-zip.org/sdk.html)
+- Alloc.c
+- Alloc.h
+- LzFind.c
+- LzFind.h
+- LzFindMt.c
+- LzFindMt.h
+- LzHash.h
+- LzmaDec.c
+- LzmaDec.h
+- LzmaEnc.c
+- LzmaEnc.h
+- LzmaLib.c
+- LzmaLib.h
+- Threads.c
+- Threads.h
+- Types.h

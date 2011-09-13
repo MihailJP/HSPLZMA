@@ -1,0 +1,6 @@
+LZMA wrapper plugin for Hot Soup Processor
+
+Created with MS VC++ 2010.
+LZMA SDK is written and placed in the public domain by Igor Pavlov.
+
+See Release/readme.txt for details (written in Japanese).
