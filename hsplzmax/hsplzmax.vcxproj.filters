@@ -13,66 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\LZMA">
+      <UniqueIdentifier>{40f8958f-9b54-458f-921e-ffb6ee97fad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\HSP">
+      <UniqueIdentifier>{86a9a5df-1df8-4867-8f73-52a9e7ce5aea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\LZMA">
+      <UniqueIdentifier>{7d0d745b-3ec1-4fd9-b80d-c8a5bc9f0aee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alloc.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="hsp3debug.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="hsp3plugin.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="hsp3struct.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\HSP</Filter>
     </ClInclude>
     <ClInclude Include="hspvar_core.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\HSP</Filter>
     </ClInclude>
-    <ClInclude Include="LzFind.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="hsp3plugin.h">
+      <Filter>ヘッダー ファイル\HSP</Filter>
     </ClInclude>
-    <ClInclude Include="LzFindMt.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="hsp3struct.h">
+      <Filter>ヘッダー ファイル\HSP</Filter>
     </ClInclude>
-    <ClInclude Include="LzHash.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="LzmaDec.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="LzmaLib.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Threads.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="Alloc.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
     </ClInclude>
     <ClInclude Include="Types.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="LzFind.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="LzFindMt.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="LzHash.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="LzmaDec.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="LzmaLib.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
+    </ClInclude>
+    <ClInclude Include="LzmaEnc.h">
+      <Filter>ヘッダー ファイル\LZMA</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Alloc.c">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="hsplzmax.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Alloc.c">
+      <Filter>ソース ファイル\LZMA</Filter>
+    </ClCompile>
     <ClCompile Include="LzFind.c">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\LZMA</Filter>
     </ClCompile>
     <ClCompile Include="LzFindMt.c">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\LZMA</Filter>
     </ClCompile>
     <ClCompile Include="LzmaDec.c">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\LZMA</Filter>
     </ClCompile>
     <ClCompile Include="LzmaLib.c">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\LZMA</Filter>
     </ClCompile>
     <ClCompile Include="Threads.c">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\LZMA</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

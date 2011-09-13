@@ -18,6 +18,7 @@ From LZMA SDK:
 - LzHash.h
 - LzmaDec.c
 - LzmaDec.h
+- LzmaEnc.h
 - LzmaLib.c
 - LzmaLib.h
 - Threads.c
