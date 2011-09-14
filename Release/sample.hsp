@@ -1,0 +1,27 @@
+#include "hsplzma.as"
+
+;ファイルを指定
+	dialog "*",16
+	if (stat==0) {dialog "中止されました": stop}
+;ファイルを読み込む
+	source_path = refstr
+	mes "元ファイル:"+source_path
+	exist source_path
+	source_size = strsize
+	mes "圧縮前サイズ:"+source_size+"バイト"
+	sdim source, source_size+4 ;何かあったらまずいので4バイト余計に確保しておく
+	bload source_path, source
+;圧縮用のバッファを確保
+	sdim target, source_size+4
+;圧縮
+	lzmacompress target, source_size+4, source, source_size, 6
+;結果を表示
+	mes "Stat: "+stat
+	if (stat!=0) {dialog "異常終了しました": stop}
+	compressed_size = strsize
+	mes "圧縮後サイズ: "+compressed_size+"バイト"
+	mes "圧縮率: "+(100.0*double(compressed_size)/double(source_size))+"%"
+	target_path = source_path+".lzma_"
+	bsave target_path, target, compressed_size
+	mes "保存先: "+target_path
+stop
