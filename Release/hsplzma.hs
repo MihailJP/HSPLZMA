@@ -20,6 +20,10 @@ MihailJP
 %group
 Šg’£“üo—Í§Œä–½—ß
 
+%url
+http://www.vector.co.jp/soft/winnt/prog/se489215.html
+https://github.com/MihailJP/HSPLZMA
+
 %port
 Win
 
