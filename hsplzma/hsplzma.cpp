@@ -4,8 +4,6 @@
 #include "hsp3plugin.h"
 #include "LzmaLib.h"
 
-#define HSPLZMA_PADDING_SIZE 8
-
 EXPORT BOOL WINAPI lzma_compress(HSPEXINFO *hei)
 {
 	unsigned char* dest = (unsigned char *)hei->HspFunc_prm_getv();
@@ -23,6 +21,7 @@ EXPORT BOOL WINAPI lzma_compress(HSPEXINFO *hei)
 	size_t* destLen = &destBufSize;
 	int ret;
 	unsigned dictSize;
+	signed long long *SourceSize;
 
 	if (*hei->er) return *hei->er;
 	if (sizeFac == -1) {
@@ -34,10 +33,11 @@ EXPORT BOOL WINAPI lzma_compress(HSPEXINFO *hei)
 			dictSize = 1 << ((int)(sizeFac/2+1));
 		}
 	}
-	ret = LzmaCompress(&dest[LZMA_PROPS_SIZE+HSPLZMA_PADDING_SIZE], destLen, source, sourceLen, &dest[0], &PropsSize, level, dictSize, lc, lp, pb, fb, numThreads);
+	ret = LzmaCompress(&dest[LZMA_PROPS_SIZE+8], destLen, source, sourceLen, &dest[0], &PropsSize, level, dictSize, lc, lp, pb, fb, numThreads);
 	if (ret == SZ_OK) {
-		*hei->strsize = *destLen + LZMA_PROPS_SIZE + HSPLZMA_PADDING_SIZE;
-		for (int i=0;i<HSPLZMA_PADDING_SIZE;i++) dest[LZMA_PROPS_SIZE + i] = 0xff;
+		*hei->strsize = *destLen + LZMA_PROPS_SIZE + 8;
+		SourceSize = (signed long long *)&dest[LZMA_PROPS_SIZE];
+		*SourceSize = (signed long long)sourceLen;
 	}
 	return -(abs(ret));
 }
@@ -52,10 +52,14 @@ EXPORT BOOL WINAPI lzma_decompress(HSPEXINFO *hei)
 	size_t* sourceLen = &slen;
 	size_t PropsSize = LZMA_PROPS_SIZE;
 	int ret;
+	signed long long *SourceSize;
 
 	if (*hei->er) return *hei->er;
-	ret = LzmaUncompress(dest, destLen, &source[LZMA_PROPS_SIZE+HSPLZMA_PADDING_SIZE], sourceLen, &source[0], PropsSize);
-	if (ret == SZ_ERROR_INPUT_EOF) ret = SZ_OK; /* Ignore this error */
+	SourceSize = (signed long long *)&source[LZMA_PROPS_SIZE];
+	if (*SourceSize == -1)
+		ret = LzmaUncompress(dest, destLen, &source[LZMA_PROPS_SIZE+8], sourceLen, &source[0], PropsSize);
+	else
+		ret = LzmaUncompress(dest, (size_t *)SourceSize, &source[LZMA_PROPS_SIZE+8], sourceLen, &source[0], PropsSize);
 	if (ret == SZ_OK) *hei->strsize = *destLen;
 	return -(abs(ret));
 }

@@ -16,10 +16,13 @@ EXPORT BOOL WINAPI lzma_decompress(HSPEXINFO *hei)
 	size_t* sourceLen = &slen;
 	size_t PropsSize = LZMA_PROPS_SIZE;
 	int ret;
+	signed long long *SourceSize;
 
 	if (*hei->er) return *hei->er;
-	ret = LzmaUncompress(dest, destLen, &source[LZMA_PROPS_SIZE+HSPLZMA_PADDING_SIZE], sourceLen, &source[0], PropsSize);
-	if (ret == SZ_ERROR_INPUT_EOF) ret = SZ_OK; /* Ignore this error */
+	if (*SourceSize == -1)
+		ret = LzmaUncompress(dest, destLen, &source[LZMA_PROPS_SIZE+8], sourceLen, &source[0], PropsSize);
+	else
+		ret = LzmaUncompress(dest, (size_t *)SourceSize, &source[LZMA_PROPS_SIZE+8], sourceLen, &source[0], PropsSize);
 	if (ret == SZ_OK) *hei->strsize = *destLen;
 	return -(abs(ret));
 }
