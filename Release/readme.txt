@@ -118,6 +118,9 @@ LZMA SDK is written and placed in the public domain by Igor Pavlov.
 　なお、HSPLZMA固有の問題についてIgor Pavlov氏に質問するのはおやめください。
 
 【バージョン履歴】
+[0.3a] 2012年1月23日
+　伸長専用版が落ちるのを修正。
+
 [0.3] 2012年1月22日
 　LZMAストリームにファイルサイズを保存するようにする。
 　(Linuxのlzmaコマンドなどでも正常に読み込めるようになりました)
