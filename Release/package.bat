@@ -2,9 +2,13 @@ rmdir /s /q hsplzma
 mkdir hsplzma
 copy hsplzma.dll hsplzma
 copy hsplzmax.dll hsplzma
-copy hsplzma.as hsplzma
-copy hsplzmax.as hsplzma
-copy hsplzma.hs hsplzma
-copy sample.hsp hsplzma
+mkdir hsplzma\common
+copy hsplzma.as hsplzma\common
+copy hsplzmax.as hsplzma\common
+mkdir hsplzma\hsphelp
+copy hsplzma.hs hsplzma\hsphelp
+mkdir hsplzma\sample
+mkdir hsplzma\sample\hsplzma
+copy lzmaenc.hsp hsplzma
 copy readme.txt hsplzma
 "C:\Program Files\7-Zip\7z.exe" a -mx=9 hsplzma.zip hsplzma
