@@ -1,6 +1,4 @@
-del /q hsplzma\*
-del /q hsplzma.zip
-rmdir hsplzma
+rmdir /s /q hsplzma
 mkdir hsplzma
 copy hsplzma.dll hsplzma
 copy hsplzmax.dll hsplzma
