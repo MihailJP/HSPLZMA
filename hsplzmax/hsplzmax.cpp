@@ -19,6 +19,7 @@ EXPORT BOOL WINAPI lzma_decompress(HSPEXINFO *hei)
 	signed long long *SourceSize;
 
 	if (*hei->er) return *hei->er;
+	SourceSize = (signed long long *)&source[LZMA_PROPS_SIZE];
 	if (*SourceSize == -1)
 		ret = LzmaUncompress(dest, destLen, &source[LZMA_PROPS_SIZE+8], sourceLen, &source[0], PropsSize);
 	else

@@ -11,8 +11,8 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Debug|Win32.Build.0 = Debug|Win32
+		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Debug|Win32.ActiveCfg = Release|Win32
+		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Debug|Win32.Build.0 = Release|Win32
 		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Release|Win32.ActiveCfg = Release|Win32
 		{9B7DADFD-5D5C-445F-AD77-81E1D2819459}.Release|Win32.Build.0 = Release|Win32
 		{EBF079C5-AA10-417E-B7B8-EE24711A6541}.Debug|Win32.ActiveCfg = Release|Win32
