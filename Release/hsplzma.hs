@@ -6,10 +6,10 @@
 HSPLZMA
 
 %ver
-0.2
+0.3
 
 %date
-2011/09/16
+2012/01/22
 
 %author
 MihailJP

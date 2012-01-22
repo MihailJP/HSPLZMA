@@ -8,14 +8,14 @@
 
 【インストールのしかた】
 　アーカイブの中の、「hsplzma.dll」をHSPの実行ファイルと同じフォルダーに、
-「hsplzma.as」を common フォルダーにコピーしてください。
-　圧縮機能を使わない場合は、「hsplzma.*」の代わりに、伸長専用版の
-「hsplzmax.*」をインストールします。
+「common」「hsphelp」「sample」をそれぞれ対応するフォルダーに、それぞれコピー
+してください。
+　「hsplzma.dll」、「hsplzma.as」は圧縮機能も搭載した版、「hsplzmax.dll」、
+「hsplzmax.as」は、圧縮機能を使わない場合のための伸長専用版です。
 
 【アンインストールのしかた】
-　「hsplzma.dll」と「hsplzma.as」を削除します。
-　伸長専用版をインストールしていた場合は、「hsplzmax.dll」と「hsplzmax.as」を
-削除します。
+　「hsplzma.dll」「hsplzmax.dll」「common\hsplzma.as」「common\hsplzmax.as」
+「hsphelp\hsplzma.hs」および「sample\hsplzma」を削除します。
 
 【つかいかた】
 　スクリプトの頭に、「#include "hsplzma.as"」という行を書くことで使用できるよ
@@ -118,6 +118,10 @@ LZMA SDK is written and placed in the public domain by Igor Pavlov.
 　なお、HSPLZMA固有の問題についてIgor Pavlov氏に質問するのはおやめください。
 
 【バージョン履歴】
+[0.3] 2012年1月22日
+　LZMAストリームにファイルサイズを保存するようにする。
+　(Linuxのlzmaコマンドなどでも正常に読み込めるようになりました)
+
 [0.2] 2011年9月16日
 　msvcr100.dllに依存していた問題を解消。
 　サンプルスクリプトを用意。
